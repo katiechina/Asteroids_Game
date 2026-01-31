@@ -49,6 +49,11 @@ def main():
                 sys.exit()
                 # pygame.quit()
                 # exit()
+            for shot in shots:
+                if ansteroid.collides_with(shot):
+                    log_event("asteroid_shot")
+                    ansteroid.split()
+                    shot.kill()
         # print(dt)
         # print(f"FPS: {clock.get_fps()}")
     # print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
