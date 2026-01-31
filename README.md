@@ -1,26 +1,17 @@
-Create a new uv project on your computer.
-uv init your-project-name
-cd your-project-name
+# Setup Guide
 
-Pin your project's Python version to 3.13
-uv python pin 3.13
+## Pin your project's Python version to 3.13
 
-Create a virtual environment at the top level of your project directory:
-uv venv
+`uv python pin 3.13`
 
-Activate the virtual environment:
-source .venv/bin/activate
+## Create a virtual environment at the top level of your project directory:
 
-You should see (your-project-name) at the beginning of your terminal prompt – for example, mine is:
+`uv venv`
 
-(Asteroids) wagslane@MacBook-Pro-2 Asteroids %
+## Activate the virtual environment:
 
-Make sure that your virtual environment is activated when running the game or using the bootdev CLI.
+`source .venv/bin/activate`
 
-Add the pygame library as a project dependency:
-uv add pygame==2.6.1
+## install all dependencies
 
-This tells Python that this project requires pygame with an exact version of 2.6.1.
-
-Make sure pygame is installed:
-uv run -m pygame
+`uv install`
